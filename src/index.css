@@ -36,3 +36,14 @@ input[type=email]:not(.browser-default):focus:not([readonly]) + label,
 input[type=password]:not(.browser-default):focus:not([readonly]) + label{
   color: #ec407a !important;
 }
+
+.chatContainer {
+  bottom: 0;
+  position: absolute;
+  width: 100%
+}
+.sContainer {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
