@@ -156,7 +156,7 @@ class Dashboard extends Component {
           onClick={this.handleClick}
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5PvcQzF-xP9HRa50L1zFf-c5bts9_MZA&v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `90vh` }} />}
+          containerElement={<div style={{ height: `85vh` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>

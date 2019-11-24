@@ -1,49 +1,59 @@
-html{
+html {
   min-height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: url(/img/mario-bg.png) no-repeat;
+  font-family: monospace;
+  background: url(/img/bricks.png) no-repeat;
   background-size: 100%;
   background-position: bottom;
   background-color: #95e8f3;
   min-height: 100%;
 }
 
-form{
+form {
   padding: 20px;
   margin-top: 60px;
 }
 
-form button, form h5{
+form button,
+form h5 {
   margin: 20px 0;
 }
 
-input[type=text]:not(.browser-default):focus:not([readonly]),
-input[type=email]:not(.browser-default):focus:not([readonly]),
-input[type=password]:not(.browser-default):focus:not([readonly]),
-textarea.materialize-textarea:focus:not([readonly]){
+input[type='text']:not(.browser-default):focus:not([readonly]),
+input[type='email']:not(.browser-default):focus:not([readonly]),
+input[type='password']:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
   border-color: #ec407a;
   box-shadow: none;
 }
 
-input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type='text']:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label,
-input[type=email]:not(.browser-default):focus:not([readonly]) + label,
-input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+input[type='email']:not(.browser-default):focus:not([readonly]) + label,
+input[type='password']:not(.browser-default):focus:not([readonly]) + label {
   color: #ec407a !important;
 }
 
 .chatContainer {
   bottom: 0;
   position: absolute;
-  width: 100%
+  width: 100%;
 }
 .sContainer {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
+}
+.rce-mbox-body {
+  padding: 10px !important;
+}
+.rce-mbox-photo--download {
+  display: none !important;
+}
+.rce-mbox-photo--img {
+  filter: brightness(2);
 }
