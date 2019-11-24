@@ -8,7 +8,7 @@ const giphy = require('giphy-api')('F0Gc8za8I0dxRagRLcauHO63TDZRuo3k');
 
 const sentiment = new Sentiment();
 
-class Chat extends Component {
+class Chat2 extends Component {
   constructor() {
     super();
     this.state = {
@@ -80,8 +80,8 @@ class Chat extends Component {
         .search({
           q:
             words.length > 0
-              ? words[Math.floor(Math.random() * words.length)] + ' Trump'
-              : 'Trump',
+              ? words[Math.floor(Math.random() * words.length)] + ' Harry Potter'
+              : 'Harry Potter',
           rating: 'g'
         })
         .then(res => {
@@ -126,7 +126,7 @@ class Chat extends Component {
 
   render() {
     return (
-      <div className="chat1">
+      <div className="chat2">
         <div className="row">
           <div className="sm-12 md-6"></div>
           <div
@@ -161,4 +161,4 @@ class Chat extends Component {
     );
   }
 }
-export default Chat;
+export default Chat2;

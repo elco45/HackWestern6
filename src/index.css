@@ -5,10 +5,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: monospace;
-  background: url(/img/bricks.png) no-repeat;
   background-size: 100%;
-  background-position: bottom;
+  font-family: monospace;
   background-color: #95e8f3;
   min-height: 100%;
 }
@@ -56,4 +54,24 @@ input[type='password']:not(.browser-default):focus:not([readonly]) + label {
 }
 .rce-mbox-photo--img {
   filter: brightness(2);
+}
+.popupWrapper {
+  color: black;
+  line-height: 20px;
+  padding: 10px;
+}
+.chat1 {
+  background-size: 100%;
+  background-position: bottom;
+  min-height: 100%;
+  background: url(/img/bricks.png) repeat;
+}
+.chat2 {
+  background-size: 100%;
+  background-position: bottom;
+  min-height: 100%;
+  background: url(/img/cloud.jpg) repeat;
+}
+.rce-input {
+  padding-left: 20px !important;
 }

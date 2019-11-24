@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Popup from 'reactjs-popup';
+import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signOut } from '../../store/actions/authActions';
 
@@ -9,14 +10,29 @@ const SignedInLinks = props => {
     <div>
       <ul className="right">
         <li>
-          <a onClick={props.signOut}>
-            Log Out
-          </a>
+          <a onClick={props.signOut}>Log Out</a>
         </li>
         <li>
-          <NavLink to="/" className="btn btn-floating pink lighten-1">
-            {props.profile.initials}
-          </NavLink>
+          <Popup
+            trigger={
+              <button className="btn btn-floating pink lighten-1">
+                {props.profile.initials}
+              </button>
+            }
+            position="bottom right"
+            closeOnDocumentClick
+          >
+            <div className="popupWrapper">
+              <NavLink
+                to={props.location.pathname === '/' ? '/chat2' : '/'}
+                className={`btn btn-floating ${
+                  props.location.pathname === '/' ? 'blue' : 'green'
+                } lighten-1`}
+              >
+                {props.location.pathname === '/' ? 'HP' : 'DT'}
+              </NavLink>
+            </div>
+          </Popup>
         </li>
       </ul>
     </div>
@@ -29,4 +45,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(SignedInLinks);
+export default withRouter(connect(null, mapDispatchToProps)(SignedInLinks));
