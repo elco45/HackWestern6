@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import getWorkRequests from '../../store/actions/workRequestActions';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'recompose';
 import {

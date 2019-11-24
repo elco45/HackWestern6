@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'react-chat-elements/dist/main.css';
 import { MessageList, Input, Button } from 'react-chat-elements';
 import axios from 'axios';
+import Speech from 'speak-tts';
 const Sentiment = require('sentiment');
 const giphy = require('giphy-api')('F0Gc8za8I0dxRagRLcauHO63TDZRuo3k');
 
@@ -62,7 +63,34 @@ class Chat extends Component {
       // } else {
       //   console.log('Bad');
       // }
-
+      // googleTTS(text, 'en', 1)
+      //   .then(url => {
+      //     console.log(url);
+      //     const audio = new Audio(url);
+      //     audio.play();
+      //   })
+      //   .catch(function(err) {
+      //     console.error(err.stack);
+      //   });
+      const speech = new Speech();
+      speech.init({
+        volume: 1,
+        lang: 'en-GB',
+        rate: 1,
+        pitch: 1,
+        voice: 'Google UK English Male',
+        splitSentences: true
+      });
+      speech
+        .speak({
+          text
+        })
+        .then(() => {
+          console.log('Success !');
+        })
+        .catch(e => {
+          console.error('An error occurred :', e);
+        });
       giphy
         .search({
           q:
