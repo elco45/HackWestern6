@@ -28,7 +28,7 @@ class Chat extends Component {
         messageList: [
           ...this.state.messageList,
           {
-            position: 'right',
+            position: 'left',
             type: 'text',
             text: message,
             date: new Date()
@@ -56,7 +56,6 @@ class Chat extends Component {
     }
   }
 
-
   handleChange(event) {
     this.setState({ message: event.target.value });
   }
@@ -73,7 +72,7 @@ class Chat extends Component {
         <div className="row">
           <div className="sm-12 md-6">
           </div>
-          <div className="sm-12 md-6" style={{ overflowY: 'scroll', maxHeight: '90%'}}>
+          <div className="sm-12 md-6" style={{ overflowY: 'scroll', height: '85vh'}}>
             <MessageList
 
               className="message-list"
