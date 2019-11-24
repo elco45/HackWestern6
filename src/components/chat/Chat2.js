@@ -32,7 +32,7 @@ class Chat2 extends Component {
 
     if (message.length > 0) {
       axios
-        .get(`http://34.66.11.57:3000/?question="${message}"`)
+        .get(`https://googluck-dacca.appspot.com/?question="${message}"`)
         .then(resp => {
           const { messageList } = this.state;
 
